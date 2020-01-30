@@ -1,10 +1,16 @@
+require "pry"
 class Shoe
   attr_accessor :color, :size, :material, :condition
   attr_reader :brand
 
+  BRANDS = [].to_set
+
+
   def initialize(brand)
-    @brand = brand
+    BRANDS << brand
   end
+
+  
 
   def cobble
     self.condition = "new"
@@ -12,3 +18,4 @@ class Shoe
   end
 
 end
+
